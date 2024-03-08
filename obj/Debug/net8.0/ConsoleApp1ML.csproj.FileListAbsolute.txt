@@ -26,3 +26,4 @@
 /Users/yevgenskopets/Documents/IT/Course/kodehode/Modul B/csharpProjects/ConsoleApp2/obj/Debug/net8.0/ConsoleApp1ML.pdb
 /Users/yevgenskopets/Documents/IT/Course/kodehode/Modul B/csharpProjects/ConsoleApp2/obj/Debug/net8.0/ConsoleApp1ML.genruntimeconfig.cache
 /Users/yevgenskopets/Documents/IT/Course/kodehode/Modul B/csharpProjects/ConsoleApp2/obj/Debug/net8.0/ref/ConsoleApp1ML.dll
+/Users/yevgenskopets/Documents/IT/Course/kodehode/Modul B/csharpProjects/ConsoleApp2/obj/Debug/net8.0/ConsoleApp1ML.sourcelink.json
