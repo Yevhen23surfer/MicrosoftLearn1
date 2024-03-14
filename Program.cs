@@ -1,25 +1,30 @@
-﻿/*
-   This code reverses a message, counts the number of times 
-   a particular character appears, then prints the results
-   to the console window.
- */
+﻿// string value1 = " a";
+// string value2 = "A";
+// Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());
 
-string originalMessage = "The quick brown fox jumps over the lazy dog.";
+// Console.WriteLine("a" != "a");
+// Console.WriteLine("a" != "A");
+// Console.WriteLine(1 != 2);
 
-char[] message = originalMessage.ToCharArray();
-Array.Reverse(message);
+// string myValue = "a";
+// Console.WriteLine(myValue != "a");
 
-int letterCount = 0;
+// Console.WriteLine(1 > 2);
+// Console.WriteLine(1 < 2);
+// Console.WriteLine(1 >= 1);
+// Console.WriteLine(1 <= 1);
 
-foreach (char letter in message) 
-{ 
-    if (letter == 'o') 
-    { 
-        letterCount++; 
-    } 
-}
+// string pangram = "The quick brown fox jumps over the lazy dog.";
+// Console.WriteLine(pangram.Contains("fox"));
+// Console.WriteLine(pangram.Contains("cow"));
 
-string newMessage = new String(message);
+// string pangram = "The quick brown fox jumps over the lazy dog.";
+// Console.WriteLine(!pangram.Contains("fox"));
+// Console.WriteLine(!pangram.Contains("cow"));
 
-Console.WriteLine(newMessage);
-Console.WriteLine($"'o' appears {letterCount} times.");
+int a = 7;
+int b = 6;
+Console.WriteLine(a != b); // output: True
+string s1 = "Hello";
+string s2 = "Hello";
+Console.WriteLine(s1 != s2); // output: False
