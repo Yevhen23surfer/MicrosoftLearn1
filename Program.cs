@@ -1,37 +1,41 @@
-﻿string permission = "Admin|Manager";
-int level = 55;
+﻿// Patrik class 4 April 2024
 
-if (permission.Contains("Admin"))
+
+// reading and writing to Files
+
+/*
+string fileName = "readme.dm";
+
+if (File.Exists(fileName))
 {
-    if (level > 55) // If the user is an Admin with a level greater than 55, output the message:
+    using (StreamReader reader = new StreamReader(fileName))
     {
-        Console.WriteLine("Welcome, Super Admin user.");
-    }
-    else // If the user is an Admin with a level less than or equal to 55, output the message:
-    {
-        Console.WriteLine("Welcome, Admin user.");
+        string content = reader.ReadToEnd();
+        Console.WriteLine("file contentes: ");
+        Console.WriteLine(content);
     }
 }
-
-else if (permission.Contains("Manager"))
-{    // If the user is a Manager with a level 20 or greater, output the message:
-    if (level >= 20)
-    {
-        Console.WriteLine("Contact an Admin for access.");
-    }
-    // If the user is a Manager with a level less than 20, output the message:
-    else
-    {
-        Console.WriteLine("You do not have sufficient privileges.");
-    }
-}
-
 else
-{   //If the user is not an Admin or a Manager, output the message:
-    Console.WriteLine("You do not have sufficient privileges.");
+{
+    Console.WriteLine("File not found!");
+}
+*/
+
+// writing to files (and creating files)
+// filename to wtire to 
+string fileName = "myText.txt";
+// folder-name for the text files:
+string folderName = "data";
+
+// create a new folder:
+Directory.CreateDirectory(folderName);
+
+using (StreamWriter writer = new StreamWriter(folderName + "/" + fileName, append: true))
+{
+    //writer.WriteLine("Hei Verden!");
+    writer.Write("more ... ");
 }
 
+// String methods
 
-
-
-
+// Error handling
