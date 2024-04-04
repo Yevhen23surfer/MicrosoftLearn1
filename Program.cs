@@ -21,6 +21,7 @@ else
 }
 */
 
+/*
 // writing to files (and creating files)
 // filename to wtire to 
 string fileName = "myText.txt";
@@ -35,7 +36,18 @@ using (StreamWriter writer = new StreamWriter(folderName + "/" + fileName, appen
     //writer.WriteLine("Hei Verden!");
     writer.Write("more ... ");
 }
+*/
 
 // String methods
 
 // Error handling
+try
+{
+    int num1 = 2;
+    int num2 = 0;
+    int result = num1 / num2;
+}
+catch(System.DivideByZeroException)
+{
+    Console.WriteLine("you canntot divide by 0!");
+}
