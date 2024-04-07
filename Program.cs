@@ -1,9 +1,6 @@
-﻿// Patrik class 4 April 2024
+﻿Console.WriteLine("Signed integral types:");
 
-// String methods 
-
-string myText = "     Patryk aadgad     ";
-
-int myTextLen = myText.Length;
-
-Console.WriteLine(myText.IndexOf("Patryk"));
+Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
