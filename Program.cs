@@ -13,8 +13,34 @@
 // Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
 // Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
 
-Console.WriteLine("");
-Console.WriteLine("Floating point types:");
-Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digis of precision)");
-Console.WriteLine($"double : {double.MinValue} to {float.MaxValue} (with ~15-17 digis of precision)");
-Console.WriteLine($"double : {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digis of precision)");
+// Console.WriteLine("");
+// Console.WriteLine("Floating point types:");
+// Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digis of precision)");
+// Console.WriteLine($"double : {double.MinValue} to {float.MaxValue} (with ~15-17 digis of precision)");
+// Console.WriteLine($"decimal : {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digis of precision)");
+
+
+// int[] data = new int[3];
+
+// string shortenedString = "Hello World!";
+// Console.WriteLine(shortenedString);
+
+
+// int myInt = 3;
+// Console.WriteLine($"int: {myInt}");
+
+// decimal myDecimal = myInt;
+// Console.WriteLine($"decimal: {myDecimal}");
+
+
+// decimal myDecimal = 3.14m;
+// Console.WriteLine($"decimal: {myDecimal}");
+
+// int myInt = (int)myDecimal;
+// Console.WriteLine($"int: {myInt}");
+
+decimal myDecimal = 1.23456789m;
+float myFloat = (float)myDecimal;
+
+Console.WriteLine($"Decimal: {myDecimal}");
+Console.WriteLine($"Float  : {myFloat}");
