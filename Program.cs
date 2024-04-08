@@ -72,15 +72,34 @@
 // Console.WriteLine(value2);
 
 
-string value = "bad";
-int result = 0;
-if (int.TryParse(value, out result))
+// string value = "bad";
+// int result = 0;
+// if (int.TryParse(value, out result))
+// {
+//     Console.WriteLine($"Measurement: {result}");
+// }
+// else
+// {
+//     Console.WriteLine("Unable to report the measurement.");
+// }
+// if (result > 0)
+//     Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+string message = "";
+decimal total = 0m;
+
+foreach (var value in values)
 {
-    Console.WriteLine($"Measurement: {result}");
+    decimal number;
+    if (decimal.TryParse(value, out number))
+    {
+        total += number;
+    } else
+    {
+        message += value;
+    }
 }
-else
-{
-    Console.WriteLine("Unable to report the measurement.");
-}
-if (result > 0)
-    Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+
+Console.WriteLine("Message: " + message);
+Console.WriteLine("Total: " + total);
