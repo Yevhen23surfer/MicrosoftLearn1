@@ -2,7 +2,6 @@
 // - Work with Variable Data in C# Console Applications
 // - - Module: Perform Operations on Arrays Using Helper Methods in C#
 
-// Exercise - Complete a challenge to reverse words in a sentence
 
 // string value = "abc123";
 // char[] valueArray = value.ToCharArray();
@@ -17,16 +16,36 @@
 //     Console.WriteLine(item);
 // }
 
-string pangram = "the quick brown fox jumpes over the lazy dog";
-string[] message = pangram.Split(' ');
-string[] newMessage = new string[message.Length];
+// string pangram = "the quick brown fox jumpes over the lazy dog";
+// string[] message = pangram.Split(' ');
+// string[] newMessage = new string[message.Length];
 
-for (int i = 0; i < message.Length; i++)
+// for (int i = 0; i < message.Length; i++)
+// {
+//     char[] letters = message[i].ToCharArray();
+//     Array.Reverse(letters);
+//     newMessage[i] = new string(letters);    
+// }
+
+// string result = String.Join(" ", newMessage);
+// Console.WriteLine(result);
+
+
+
+// Exercise - Complete a challenge to parse a string of orders, sort the orders and tag possible errors
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] items = orderStream.Split(',');
+Array.Sort(items);
+
+foreach (var item in items)
 {
-    char[] letters = message[i].ToCharArray();
-    Array.Reverse(letters);
-    newMessage[i] = new string(letters);    
+    if (item.Length == 4)
+    {
+        Console.WriteLine(item);
+    }
+    else
+    {
+        Console.WriteLine(item + "\t- Error");
+    }
 }
-
-string result = String.Join(" ", newMessage);
-Console.WriteLine(result);
