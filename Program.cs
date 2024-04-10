@@ -2,5 +2,5 @@
 // - Work with Variable Data in C# Console Applications
 // - - Format alphanumeric data for presentation in C#
 
-decimal measurament = 123456.78912m;
-Console.WriteLine($"Measurament: {measurament:N4} units");
+decimal tax = .36785m;
+Console.WriteLine($"Tax rate: {tax:P2}");
