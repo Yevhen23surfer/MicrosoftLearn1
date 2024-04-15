@@ -3,6 +3,7 @@
 // - - Modify the Content of Strings Using Built-In String Data Type Methods in C#
 
 
-string data = "12345John Smith          5000  3  ";
-string updateData = data.Remove(5, 20);
-Console.WriteLine(updateData);
+string message = "This--is--ex-amp-le--da-ta";
+message = message.Replace("--", " ");
+message = message.Replace("-","");
+Console.WriteLine(message);
