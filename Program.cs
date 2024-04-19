@@ -2,27 +2,14 @@
 // - Create C# Methods with Parameters
 // - - Exercise - Use value and reference type parameters
 
-using System.Runtime.InteropServices;
+string status = "Healthy";
 
-int[] array = {1, 2, 3, 4, 5};
+Console.WriteLine($"Start: {status}");
+SetHealth(false);
+Console.WriteLine($"End: {status}");
 
-PrintArray(array);
-Clear(array);
-PrintArray(array);
-
-void PrintArray(int[] array) 
+void SetHealth(bool isHealthy) 
 {
-    foreach (int a in array) 
-    {
-        Console.Write($"{a} ");
-    }
-    Console.WriteLine();
-}
-
-void Clear(int[] array) 
-{
-    for (int i = 0; i < array.Length; i++) 
-    {
-        array[i] = 0;
-    }
+    status = (isHealthy ? "Healthy" : "Unhealthy");
+    Console.WriteLine($"Middle: {status}");
 }
