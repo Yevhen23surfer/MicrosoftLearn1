@@ -1,28 +1,16 @@
 ﻿// Foundational C# with Microsoft
-// - Write your first C# method 
-// - - Exercise - Understand method scope
+// - Create C# Methods with Parameters
+// - - Exercise - Use value and reference type parameters
 
-using System.Net.NetworkInformation;
+int a = 3;
+int b = 4;
+int c = 0;
 
-double pi = 3.14159;
-PrintCircleInfo(12);
-PrintCircleInfo(24);
+Multiply(a, b, c);
+Console.WriteLine($"global statement: {a} x {b} = {c} ");
 
-void PrintCircleArea(int radius)
+void Multiply(int a, int b, int c)
 {
-    double area = pi * (radius * radius);
-    Console.WriteLine($"Area = {area}");
-}
-
-void PrintCircleCircumference(int radius)
-{
-    double circumference = 2 * pi * radius ;
-    Console.WriteLine($"Circumference = {circumference}");
-}
-
-void PrintCircleInfo(int radius)
-{
-    Console.WriteLine($"Circle with radius {radius}");
-    PrintCircleArea(radius);
-    PrintCircleCircumference(radius);
+    c = a * b;
+    Console.WriteLine($"inside Multiply method: {a} x {b} = {c}");
 }
