@@ -1,36 +1,14 @@
 ﻿// Foundational C# with Microsoft
 // - Create C# methods that return values
-// - - Exercise - Understand return type syntax
+// - - Exercise - Return numbers from methods
 
-double total = 0;
-double minimumSpend = 30.00;
+double usd = 23.73;
+int vnd = UsdToVnd(usd);
 
-double[] items = {15.97, 3.50, 12.25, 22.99, 10.98};
-double[] discounts = {0.30, 0.00, 0.10, 0.20, 0.50};
+Console.WriteLine($"${usd} USD = ${vnd} VND");
 
-for (int i = 0; i < items.Length; i++) 
+int UsdToVnd(double usd)
 {
-    total += GetDiscountedPrice(i);
-}
-
-if (TotalMeetsMinimum())
-{
-    total -= 5.00;
-}
-
-Console.WriteLine($"Total: ${FormatDecimal(total)}");
-
-double GetDiscountedPrice(int itemIndex)
-{
-    return items[itemIndex] * (1 - discounts[itemIndex]);
-}
-
-bool TotalMeetsMinimum()
-{
-    return total >= minimumSpend;
-}
-
-string FormatDecimal(double input)
-{
-    return input.ToString().Substring(0, 5);
+    int rate = 23500;
+    return (int) (rate * usd);
 }
