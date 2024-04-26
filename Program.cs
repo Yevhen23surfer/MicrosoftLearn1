@@ -1,37 +1,26 @@
 ﻿// Foundational C# with Microsoft
-// - Create C# Methods with Parameters
-// - - Exercise. Performing a task to display e-mail addresses
+// - Create C# methods that return values
+// - - Exercise - Understand return type syntax
 
-using System.Runtime.ExceptionServices;
+double total = 0;
+double minimumSpend = 30.00;
 
-string[,] corporate = 
+double[] items = {15.97, 3.50, 12.25, 22.99, 10.98};
+double[] discounts = {0.30, 0.00, 0.10, 0.20, 0.50};
+
+Console.WriteLine($"Total: ${total}");
+
+double GetDiscountedPrice(int itemIndex)
 {
-    {"Robert", "Bavin"}, {"Simon", "Bright"},
-    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
-    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
-};
-
-string[,] external = 
-{
-    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
-    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
-};
-
-string externalDomain = "hayworth.com";
-
-for (int i = 0; i < corporate.GetLength(0); i++) 
-{
-    DisplayEmail(first: corporate[i,0], last: corporate[i,1] );
+    return items[itemIndex] * (1 - discounts[itemIndex]);
 }
 
-for (int i = 0; i < external.GetLength(0); i++) 
+bool TotalMeetsMinimum()
 {
-    DisplayEmail(first: external[i,0], last: external[i,1], domain: externalDomain);   
+    return total >= minimumSpend;
 }
 
-void DisplayEmail(string first, string last, string domain = "contoso.com")
+string FormatDecimal(double input)
 {
-    string email = first.Substring(0,2) + last;
-    email = email.ToLower();
-    Console.WriteLine($"{email}@{domain}");
+    return input.ToString().Substring(0, 5);
 }
